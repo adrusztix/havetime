@@ -1,0 +1,95 @@
+.top-page-header {
+	background: #3a3839 url("../images/page-bg.jpg") no-repeat;
+	@include cover;
+	background-position: 41% 0;
+	height: 270px;
+	margin-bottom: 40px;
+	position: relative;
+	border-bottom: 1px solid #3a3839;
+
+	@include tablet {
+		background-position: 40% 0;
+	}
+
+	@include tablethor {
+		background-position: 30% 0;
+	}
+
+	@include laptop {
+		background-position: 20% 0;
+	}
+
+	@include fullhd {
+		background-position: 250px 0;
+		margin-top: 183px;
+	}
+
+	.title {
+		@include middle-y;
+		color: #fff;
+		font-weight: 300;
+		font-size: 24px;
+		width: 270px;
+
+		@include minitablet {
+			width: 380px;
+		}
+
+		@include tablet {
+			font-size: 30px;
+			width: 470px;
+		}
+
+		@include tablethor {
+			width: 650px;
+		}
+
+		@include desktop {
+			font-size: 42px;
+			width: 690px;
+		}
+	}
+}
+
+// content
+
+.page-content {
+	margin-bottom: 40px;
+
+	@include tablet {
+		font-size: 16px;
+		line-height: 1.6;
+	}
+}
+
+.page-sidebar {
+	@include make-row();
+
+	.page-content {
+		@include make-xs-column(12);
+		@include tablethor {
+			@include make-md-column(9);
+		}
+	}
+
+	aside {
+		@include make-xs-column(12);
+		@include tablethor {
+			@include make-md-column(3);
+		}	
+
+		.sidebar {
+			margin-bottom: 40px;	
+			// background: $gray;
+			border: 1px solid $gray;
+			padding: 30px;		
+			
+			h2 {
+				font-size: 16px;
+				font-weight: 700;
+				margin-bottom: 20px;
+				margin-top: 0;
+			}	
+		}
+	}
+}

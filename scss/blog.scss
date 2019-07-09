@@ -1,0 +1,89 @@
+.blog {
+	article {
+		@include make-row();
+		margin-bottom: 40px;
+
+		.thumb {
+			@include make-xs-column(12);
+			@include make-sm-column(3);
+			margin-bottom: 15px;
+
+			img {
+				object-fit: cover;
+				height: 150px;
+
+				@include tablet {
+					height: 215px;
+				}
+
+				@include desktop {
+					height: 190px;
+				}
+			}
+		}
+
+		.article-excerpt {
+			@include make-xs-column(12);
+			@include make-sm-column(9);
+
+			.title {
+				font-size: 16px;
+				margin-bottom: 5px;
+				font-weight: 600;
+
+				@include tablet {
+					font-size: 18px;
+				}
+			}
+
+			.meta {
+				margin-bottom: 15px;
+
+				@include minitablet {
+					@include clearfix;
+				}
+
+				.date {
+					font-size: 12px;
+					font-weight: 600;
+					color: $gray-dark;
+
+					@include minitablet {
+						float: left;
+					}
+				}
+
+				.category {
+					font-size: 12px;	
+
+					@include minitablet {
+						float: left;
+						margin-left: 10px;
+					}							
+				}
+			}
+
+		}	
+
+		.no-thumb {
+			@include make-xs-column(12);
+		}
+
+		// single
+
+		.post-image {
+			@include make-xs-column(12);
+			margin-bottom: 15px;
+		} 
+
+		.article-single {
+			@include make-xs-column(12);
+
+			.title {
+				@include desktop {
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}

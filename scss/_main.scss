@@ -1,0 +1,759 @@
+.show-arrow {
+	opacity: 1 !important;
+}
+#back-to-top {
+    position: fixed;
+    bottom: 97px;
+    right: 10px;
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 27px;
+    background: $brand-primary;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    // transition: opacity 0.5s ease-in;
+    @include basic-transition;
+    opacity: 0;
+
+    &:hover {
+    	background: #fff;
+    	color: $brand-primary;
+    	border-color: $brand-primary;
+    }
+}
+
+
+#top-bg {
+	background: $gray;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	.top-contact {
+		@include make-row;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 13px;
+		font-weight: 600;
+		color: $gray-dark;
+		display: table;
+		width: 100%;
+		text-align: center;
+
+		@include screen {
+			text-align: right;
+			width: 70%;
+			float: right;
+			margin-right: 15px;
+		}
+
+		@include desktop {
+			width: 60%;
+		}
+
+		li {
+			display: table-cell;
+
+			&:nth-child(3) {
+				display: none;
+
+				@include phone {
+					display: table-cell;
+				}				
+			}	
+			&:nth-child(4) {
+				display: none;
+
+				@media all and (min-width: 600px) {
+					display: table-cell;
+				}				
+			}			
+
+			.fa {
+				font-size: 24px;
+				color: $brand-primary;
+				margin-right: 5px;	
+				vertical-align: sub;			
+			}
+
+			a {
+				color: $gray-dark;
+				&:hover {
+					color: $brand-primary;
+				}
+			}			
+		}
+
+	}
+}
+
+.top-section {
+	@include fullhd {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9999;
+	}
+}
+
+
+.affix {
+	@media all and (max-width: 1919px) {
+		opacity: 0;
+	}
+}
+
+// logo
+
+// #logo-menu {
+// 	padding-top: 20px;
+// 	padding-bottom: 20px;
+// }
+
+
+.logo {
+    background: url("../images/logo.png") no-repeat;
+	display: block;
+	width: 180px;
+	height: 97px;
+	margin-left: 15px;
+
+	@include retina {
+        background: url("../images/logo@2x.png") no-repeat;
+        @include contain;
+  	}		
+}
+
+// menu
+
+.menu-container {
+
+	@include screen {
+		float: right;
+	}
+}
+
+.menu-system-container {
+	position: relative;
+
+	@include screen {
+		position: inherit;
+		display: inline-block;
+	}
+}
+
+#menu-system {
+	position: absolute;
+	z-index: 1;
+	top: 50px;
+	left: 0px;
+
+	@include screen {
+		position: inherit;
+		float: left;
+		margin-left: 15px;
+		margin-top: 30px;
+	}
+
+	.btn-primary {
+		border-color: #fff;
+
+		@include screen {
+			border-color: #81aa1c;
+		}
+	}
+}
+
+#main-menu {
+
+	@include screen {
+		float: left;
+	}
+}
+
+.navbar {
+	margin-bottom: 0; 
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #3a3839;
+
+	.navbar-collapse {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.navbar-nav {
+		margin: 25px 0 0 0;
+	}
+
+	a {
+		font-weight: 600;
+	}
+} 
+
+// slider
+
+#slider {
+	margin-bottom: 40px;
+	border-bottom: 1px solid #3a3839;
+
+	@include fullhd {
+		margin-top: 183px;
+	}
+
+	.slide-1 {
+		background-image: url("../images/slide-1-phone.jpg");
+		@include cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@media all and (min-width: 321px) {
+			background-image: url("../images/slide-1-tablet.jpg");
+		}
+
+		@include desktop {
+			background-image: url("../images/slide-1.jpg");
+		}		
+	}
+	.slide-2 {
+		background-image: url("../images/slide-2-phone.jpg");
+		@include cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@media all and (min-width: 321px) {
+			background-image: url("../images/slide-2-tablet.jpg");
+		}
+
+		@include desktop {
+			background-image: url("../images/slide-2.jpg");
+		}		
+	}
+	.slide-3 {
+		background-image: url("../images/slide-3-phone.jpg");
+		@include cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		@media all and (min-width: 321px) {
+			background-image: url("../images/slide-3-tablet.jpg");
+		}
+
+		@include desktop {
+			background-image: url("../images/slide-3.jpg");
+		}		
+	}	
+
+	.slider-content {
+		color: #fff;
+		height: 339px;
+		padding: 60% 0 10% 0;
+
+		@media all and (min-width: 321px) {
+			padding: 45% 0 10% 0;
+		}
+
+		@media all and (min-width: 481px) {
+			padding: 35% 0 10% 0;
+		}
+
+		@media all and (min-width: 670px) {
+			padding: 30% 0 10% 0;
+		}				
+
+		@include tablet {
+			height: 580px;
+			padding: 45% 0 10% 0;
+		}
+
+		@include screen {
+			padding: 35% 0 10% 0;
+		}	
+
+		@include desktop {
+			padding: 30% 0 10% 0;
+		}			
+
+		h2 {
+			font-size: 17px;
+			font-weight: 700;
+			margin-bottom: 5px;
+
+			@include phone {
+				font-size: 25px;
+			}	
+
+			@include tablet {
+				font-size: 45px;
+			}
+		}
+
+		h3 {
+			font-size: 16px;
+			font-weight: 300;
+			margin: 0;
+
+			@include phone {
+				font-size: 20px;
+			}			
+
+			@include tablet {
+				font-size: 35px;
+			}			
+		}		
+	}	
+}
+
+
+// box
+
+.box-wrapper {
+	@include make-row();
+	margin-top: 45px;
+	text-align: center;
+
+	.box {
+		@include make-xs-column(12);
+		@include make-md-column(4);
+		margin-bottom: 20px;
+
+
+		.fa {
+			font-size: 100px;
+			color: $brand-primary;
+		}
+
+		h2 {
+			font-size: 20px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			color: #000;
+			font-weight: 600;
+		}
+
+		.content-bg {
+			background: $gray;
+			padding: 20px 20px 15px 20px;
+			@include border-radius(5px);
+
+			@include screen {
+				height: 270px;
+			}	
+
+			@include desktop {
+				height: 230px;
+			}						
+		}
+	}
+}
+
+// parallax
+
+#parallax {
+    background: url('../images/parallax.jpg') no-repeat;
+    background-position: 50% 50%;
+    @include cover;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+    @include desktop {
+    	background-attachment: fixed;
+    }
+
+
+    .container {
+        padding: 25px 15px;
+
+        @include desktop {
+        	padding: 100px 15px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 100px;
+            margin-top: 0;
+
+            @media all and (min-width: 540px) {
+            	font-size: 30px;
+            }
+
+            @include tablet {
+            	font-size: 38px;
+            }
+
+            @include screen {
+            	font-size: 50px;
+            }  
+
+            @include desktop {
+            	font-size: 60px;
+            	margin-bottom: 10px;
+            }                      
+        }  
+
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+            margin: 0;
+
+            @media all and (min-width: 540px) {
+            	font-size: 26px;
+            }            
+
+            @include tablet {
+            	font-size: 36px;
+            } 
+
+            @include screen {
+            	font-size: 42px;
+            }   
+
+            @include desktop {
+            	font-size: 48px;
+            }                                
+        }              
+
+
+    }
+}
+
+// about
+
+.about {
+	@include make-row;
+	.text {
+		@include make-xs-column(12);
+		@include make-md-column(8);
+		color: #000;
+
+		h3 {
+			font-size: 24px;
+			font-weight: 300;
+			margin: 0;
+		}
+
+		h2 {
+			font-size: 48px;
+			font-weight: 700;
+			margin-top: 10px;
+			line-height: 1;
+		}
+
+		p {
+			font-size: 16px;
+			font-weight: 300;
+
+
+			@include tablet {
+				font-size: 18px;	 			
+			}
+		}
+
+		.tags {
+			list-style: none;
+			margin: 25px 0 25px 0px;
+			padding: 0;
+			color: $brand-primary;
+			font-size: 16px;
+
+			li {
+				border: 1px solid #000;
+				padding: 10px;
+				display: inline-block;
+				margin-right: 10px;
+				margin-bottom: 15px;
+				width: 45%;
+				text-align: center;
+
+				@media all and (min-width: 480px) {
+					width: 22%;
+				}
+
+				@include tablet {
+					width: 48%;
+				}
+
+				@include screen {
+					width: 22%;
+				}				
+			}
+		}
+	}
+
+	.foto {
+		@include make-xs-column(12);
+		@include make-md-column(4);
+		@include no-padding;		
+
+
+		img {
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 40px;
+
+			@include screen {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+// opinions
+
+#opinions-bg {
+	background: $gray;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+
+	.opinions-wrapper {
+		@include make-xs-column(12);
+		text-align: center;
+
+		.bx-viewport {
+			height: auto !important;
+		}
+
+		p {
+			color: #7a7979;
+			font-size: 16px;
+			font-style: italic !important;
+		}
+
+		.name {
+			font-weight: 600;
+			color: #000;
+		}
+	}
+}
+
+// formular
+
+#form-wrapper {
+	margin-top: 40px;
+	@include clearfix;
+	background: $yellow;
+
+	.info {
+		width: 100%;
+		background: $yellow;
+		color: #000;
+		padding: 30px;
+
+		@media all and (min-width: 600px) {
+			width: 50%;
+			float: left;
+		}
+
+		@include screen {
+			width: 40%;
+		}
+
+
+		.info-inner {
+
+			@include desktop {
+				width: 430px;
+				float: right;
+			}
+		}
+	}
+
+	.formular {
+		width: 100%;
+		background: $gray;
+		padding: 30px;
+		position: relative;
+
+		@media all and (min-width: 600px) {
+			width: 50%;
+			float: right;
+		}
+
+		@include screen {
+			width: 60%;
+		}
+
+
+		.fa {
+			width: 20px;
+		}
+
+		.form {
+
+			@include screen {
+				width: 315px;
+			}
+		}	
+
+		.input-group-addon {
+			color: $gray-dark;
+			font-size: 18px;
+		}	
+
+		.form-control {
+			color: $text-color;
+		}
+
+		.agree {
+			font-size: 11px;
+			margin-top: 15px;
+			font-style: italic;
+		}
+	}
+}
+
+.slogan {
+
+	p {
+		font-size: 20px;
+		font-weight: 300;
+		color: #000;
+		font-style: italic;
+		line-height: 1.1;
+
+		@include phone {
+			text-align: center;
+		}
+
+		@include screen {
+			text-align: left;
+		}		
+
+		span {
+			font-weight: 600;
+			font-size: 24px;
+			padding-left: 22px;
+
+			@include phone {
+				padding-left: 0;
+			}
+
+			@include screen {
+				padding-left: 25px;
+			}			
+		}
+	}
+}
+
+#slogan-mobile {
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	@include screen {
+		display: none;
+	}
+}
+
+#slogan-desktop {
+	display: none;
+
+	@include screen {
+		display: block;
+		@include middle-y;
+		left: 370px;
+	}
+}
+
+// footer
+
+footer {
+	background: #000;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	@include tablet {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.footer-contact {
+		@include make-row;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 13px;
+		font-weight: 600;
+		color: $gray-dark;
+		display: table;
+		width: 100%;
+		text-align: center;
+
+		@include screen {
+			text-align: right;
+			width: 70%;
+			float: right;
+			margin-right: 15px;
+		}
+
+		@include desktop {
+			width: 60%;
+		}
+
+		li {
+			display: table-cell;
+
+			&:nth-child(3) {
+				display: none;
+
+				@include phone {
+					display: table-cell;
+				}				
+			}	
+			&:nth-child(4) {
+				display: none;
+
+				@media all and (min-width: 600px) {
+					display: table-cell;
+				}				
+			}			
+
+			.fa {
+				font-size: 24px;
+				color: $brand-primary;
+				margin-right: 5px;	
+				vertical-align: sub;			
+			}
+
+			a {
+				color: $gray-dark;
+				&:hover {
+					color: $brand-primary;
+				}
+			}			
+		}
+
+	}
+}
+
+.footer-bottom {
+	background: #1c1c1c;
+	color: #424242;
+	font-size: 13px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	a {
+		color: #424242;
+		&:hover {
+			color: #ccc;
+		}
+	}
+
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
+}
